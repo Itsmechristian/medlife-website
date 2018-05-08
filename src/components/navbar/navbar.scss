@@ -1,0 +1,26 @@
+nav{
+  width: 100%;
+  background: #006aff71;
+  height: 80px;
+
+  .container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+
+    .logo-wrapper{
+      h1{
+        font-size: 2rem;
+        color: #006cff;
+
+        span{
+          color: #fff;
+        }
+      }
+    }
+    .links-wrapper{
+      
+    }
+  }
+}
