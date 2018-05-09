@@ -1,47 +1,60 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { browserHistory } from 'react-router';
 import './navbar.scss'
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = { 
-      navbarClass: []
+      height: 100,
+      background: 'rgb(0, 108, 255, 0.6)',
+      containerPadding: '30px 0'
     }
-
     this.navbarAnimation = this.navbarAnimation.bind(this)
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.navbarAnimation)
-    
+
   }
 
   navbarAnimation(event) {
 
    let windowY = Number(window.pageYOffset.toFixed(0))
 
-   if(windowY > 600) {
-        this.state.navbarClass.push('show')
+   if(windowY > 80) {
+        this.setState({
+          height: 80,
+          background: 'rgba(8, 31, 62)',
+          containerPadding: '15px 0'
+        })
    }
    else{
-     this.state.navbarClass.splice('show')
+      this.setState({
+        height: 100,
+        background: 'rgb(0, 108, 255, 0.6)',
+        containerPadding: '30px 0'
+      })
    }
-  }
-
-  checkArray(oldArr, newArr) {
-    return oldArr.some(x => {
-      return x.length == newArr.length && a.every(e => newArr.includes(e))
-    })
   }
 
   render() {
     return (
-      <nav className={this.state.navbarClass}>
-        <div className="container">
+      <nav style={{height: this.state.height, opacity: this.state.opacity, background: this.state.background}}>
+        <div className="container" style={{padding: this.state.containerPadding}}>
           <div className="logo-wrapper">
           <Link to="/"><h1>Med<span>life</span></h1></Link>
+          </div>
+          <div className="links-wrapper">
+            <ul>
+              <Link to="/"><li>Home</li></Link>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/">Services</Link></li>
+              <li><Link to="/">Contact</Link></li>
+              <li><Link to="/">FOR EMERGENCY CLICK HERE</Link></li>
+            </ul>
           </div>
         </div>
       </nav>
