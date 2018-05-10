@@ -18,17 +18,20 @@
   }
 }
 
+.container{
+  width: 90%;
+}
 header{
   height: 800px;
   width: 100%;
   position: relative;
+  
 
   &::after{
-  background-position: 100% 20%;
-    background-size: 100%;
+    background-position: 55% 30%;
+    background-size: 1920px;
     content: "";
     background-repeat: no-repeat;
-    background-image: url('../../assets/images/doctor.jpg');
     opacity: 0.7;
     top: 0;
     left: 0;
@@ -36,6 +39,7 @@ header{
     right: 0;
     position: absolute;
     z-index: -1;
+    background-image: url('../../assets/images/doctor.jpg');
   }
 
   .container{
@@ -43,7 +47,7 @@ header{
 
     .text-wrapper{
       position: relative;
-      top: 40%;
+      top: 30%;
 
       h1{
         font-size: 3.5rem;
@@ -70,39 +74,92 @@ header{
   }
 }
 .body{
-  height: auto;
-  
-  .section-one{
-    height: 600px;
-    width: 100%;
+  .container{
+    .section-one{
+      .header{
+        margin: 10px auto;
+        background: #fff;
+        width: 80%;
+        height: auto;
 
-    .container{
-      height: 100%;
-      padding: 50px 0px;
+        section{
+          height: 25%;
+          padding: 30px;
 
-      .left-side{
-        vertical-align: top;
-        width: 35%;
-        display: inline-block;
+          h1, p, small, h2 {
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+            color: #fff;
+          }
 
-        h1{
-          margin: 10px 0px;
-          font-size: 3rem;
-        }
+          &:nth-child(odd) {
+            background-color: #006cff;
+          }
+          &:nth-child(even) {
+            background-color: #081f3e;
+          }
+          p{
+            font-size: 0.9rem;
+            line-height: 1.5;
+          }
 
-        P{
-          color: #999;
-          font-size: 1rem;
-          line-height: 1.7;
-          font-weight: 300;
+          a{
+            border-radius: 25px;
+            padding: 5px 17px;
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+          }
+
+          .wrapper{
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .wrapper{
+            margin: 20px 0px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #fff;
+            
+            h2{
+              font-size: 1rem;
+            }
+          }
+
+          > h2{
+            margin: 1rem 0;
+          }
         }
       }
+    }
+  }
+}
 
-      .right-side{
-        padding: 10px 0px;
-        vertical-align: top;
-        width: 65%;
-        display: inline-block;
+@media screen and (min-width: 990px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+  header{
+    &::after{
+      background-size: 100%;
+    }
+  }
+  .body{
+    .container{
+      .section-one{
+        .header{
+          top: -150px;
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          
+          section {
+            height: auto;
+            flex: 1;
+          }
+        }
       }
     }
   }

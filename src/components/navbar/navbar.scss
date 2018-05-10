@@ -5,6 +5,7 @@ nav{
   position: fixed;
 
   .container{
+    width: 90%;
     box-sizing: border-box;
     transition: padding .5s ease;
     height: 100%;
@@ -22,31 +23,86 @@ nav{
         }
       }
     }
-    .links-wrapper{
+    .hamburger-menu{
+      position: relative;
+      height: 20px;
+      width: 20px;
+      padding: 10px 0px;
+
+      span{
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        background: #fff;
+
+        &:nth-child(1){
+          top: 8px;
+        }
+        &:nth-child(2){
+          top: 16px;
+        }
+        &:nth-child(3){
+          top: 24px;
+        }
+      }
+    }
+    .web-menu {
+      display: none;
+    }
+    .menu-items{
+      transition: max-height .2s ease-in-out, opacity .2s, visibility 0.8s;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      background-color: #081f3e;
+
       ul{
         margin: 0;
+        padding: 5px;
 
         a{
-          font-weight: 600;
           color: #fff;
+          font-weight: bold;
+        }
+        a > li {
+          padding: 10px 5%;
+          margin: 5px 0px;
         }
         
-        li{
-          display: inline-block;
-          padding: 0px 10px;
-     
+        a:first-child > li {
+          
+          background-color: #006cff;
 
-          &:nth-child(1) {
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 990px) {
+  nav{
+    .container{
+      .hamburger-menu, .menu-items {
+        display: none;
+      }
+      .web-menu{
+        display: block;
+
+        ul{
+          margin: 0;
+
+          a{
+            color: #fff;
+            font-weight: 600;
+            display: inline-block;
+            
+          }
+          
+          a > li {
+            margin: 5px 15px;
+          }
+          a:first-child > li{
             padding: 10px 20px;
             background: #006cff;
-          }
-
-          &:nth-child(5) {
-            margin-left: 20px;
-            position: relative;
-            top: -2px;
-            background: crimson;
-            padding: 15px 10px;
           }
         }
       }
