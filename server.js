@@ -11,6 +11,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname, 'dist/index.html')
 });
 
-let port = 5000 || process.env.port
+let port = 5001 || process.env.port
 
 app.listen(port, () => console.log(`Connected to port ${port}`))
