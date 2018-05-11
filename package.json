@@ -19,6 +19,7 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "https://github.com/sass/node-sass/tarball/v5",
+    "nodemon": "^1.17.4",
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-loader": "^2.1.5",
     "sass-loader": "^7.0.1",
@@ -29,6 +30,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.4.1",
+    "express": "^4.16.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-router-dom": "^4.2.2"

@@ -10,7 +10,7 @@ class Navbar extends Component {
     this.state = {
       navbar: {
         height: 90,
-        background: 'rgb(0, 108, 255, 0.6)',
+        background: 'rgba(0, 108, 255, 0.5)',
         containerPadding: '20px 0'
       },
 
@@ -50,7 +50,7 @@ class Navbar extends Component {
       this.setState({
         navbar: {
           height: 90,
-          background: 'rgb(0, 108, 255, 0.6)',
+          background: 'rgba(0, 108, 255, 0.5)',
           containerPadding: '20px 0'
         }
       })

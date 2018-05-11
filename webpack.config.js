@@ -53,8 +53,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: [ { loader: 'file-loader' }]
+        test: /\.(png|jpg|gif|jpeg)$/,
+        use: [ { loader: 'file-loader', options: { name: '[path][name]-[hash:8].[ext]'} }]
       }
     ]
   },

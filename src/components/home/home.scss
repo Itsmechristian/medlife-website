@@ -79,7 +79,6 @@ header{
       .header{
         margin: 10px auto;
         background: #fff;
-        width: 80%;
         height: auto;
 
         section{
@@ -132,11 +131,120 @@ header{
         }
       }
     }
+    .section-two{
+      height: auto;
+      text-align: center;
+
+      .logos{
+        margin: 50px 0px;
+
+        .logo-wrapper{
+          img{
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+      h1{
+        font-size: 3rem;
+      }
+      h3{
+        font-size: 1.6rem;
+      }
+    }
+
+    .section-three{
+      padding: 100px 0px;
+      height: auto;
+
+      .left-side{
+        padding: 20px 0px;
+        
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .right-side{
+        h1{
+          font-size: 1.5rem;
+        }
+
+        p{
+          color: #999;
+        }
+        a{
+
+          .link{
+
+            .para-wrapper{
+              vertical-align: middle;
+              display: inline-block;
+              background: #006cff;
+              height: 35px;
+
+              p{
+                padding: 8px 10px;
+                margin: 0;
+                color: #fff;
+              }
+            }
+       
+            .image-wrapper{
+              box-sizing: border-box;
+              height: 35px;
+              vertical-align: middle;
+              display: inline-block;
+              background: #081f3e;
+
+              img{
+                padding: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .section-four{
+      height: auto;
+
+    }
+  }
+}
+@media screen and (min-width: 786px) {
+  .body{
+    .container{
+      .section-two{
+
+        .logos{
+          display: inline-block;
+          width: 45%;
+    
+          .logo-wrapper{
+            margin: 15px 0px;
+          }
+        }
+      }
+    
+      .section-four{
+        padding: 100px 0px;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 990px) {
-
+  .section-three{
+    .left-side, .right-side{
+      vertical-align: top;
+      margin: 15px;
+      padding: 20px 0px;
+      width: 45%;
+      display: inline-block;
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -158,6 +266,25 @@ header{
           section {
             height: auto;
             flex: 1;
+          }
+        }
+      }
+      .section-two{
+        display: flex;
+        .logos{
+          margin: 50px 15px;
+          flex: 1;
+          display: block;
+          
+        }
+      }
+      .section-three{
+        .right-side{
+          h1{
+            font-size: 2rem;
+          }
+          > p{
+            line-height: 1.7;
           }
         }
       }

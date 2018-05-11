@@ -12,8 +12,8 @@ const Routing = () => {
        <div>
         <Navbar />
 
-         <Route path="/about" component={ About } />
          <Route exact path="/" component={ Home } />
+         <Route path="/about" component={ About } />
        </div>
      </Router>
    )
