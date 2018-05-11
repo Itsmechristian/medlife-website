@@ -41,7 +41,7 @@ class Navbar extends Component {
       this.setState({
         navbar: {
           height: 60,
-          background: 'rgba(8, 31, 62)',
+          background: '#081f3e',
           containerPadding: '10px 0'
         }
       })
