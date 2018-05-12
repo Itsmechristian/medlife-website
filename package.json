@@ -18,7 +18,7 @@
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
-    "node-sass": "https://github.com/sass/node-sass/tarball/v5",
+    "node-sass": "^4.9.0",
     "nodemon": "^1.17.4",
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-loader": "^2.1.5",

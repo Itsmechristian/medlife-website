@@ -28,6 +28,8 @@ class Blog extends Component {
   }
 
   render() {
+ 
+
     return (
       <div className="blogs">
         <div className="blog-ctn">

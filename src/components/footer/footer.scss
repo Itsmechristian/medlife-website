@@ -1,0 +1,32 @@
+footer {
+  height: 500px;
+  background: #081f3e;
+  padding: 20px 0px;
+
+  .sections {
+    .section {
+      .logo-wrapper {
+        h1 {
+          font-size: 2.5rem;
+          color: #006cff;
+          opacity: 1;
+          span {
+            color: #fff;
+          }
+        }
+      }
+      .text-wrapper {
+        p {
+          margin: 30px 0px;
+          line-height: 1.7;
+          color: #fff;
+        }
+      }
+      .icon-wrapper {
+        img {
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
+}

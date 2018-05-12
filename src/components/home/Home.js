@@ -19,7 +19,6 @@ class Home extends Component {
 
   }
 
-
   render() {
     return (
       <div className="home">
@@ -141,10 +140,9 @@ class Home extends Component {
             <div className="section-four">
              <Blog />
             </div>
-            <div className="section-five">
-             <Footer />
-            </div>
           </div>
+          <Footer />
+          
         </div>
       </div>
     )

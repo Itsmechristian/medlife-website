@@ -36,7 +36,12 @@
       .text-wrapper{
         margin: 15px 0px;
 
+        h1{
+          font-size: 1.5rem;
+        }
+
         p{
+          line-height: 1.7;
           color: #999;
         }
       }
