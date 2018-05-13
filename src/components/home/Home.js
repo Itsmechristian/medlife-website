@@ -8,7 +8,7 @@ import injectionicon from '../../assets/images/injection-icon.png';
 import medkiticon from '../../assets/images/medkit-icon.png';
 import heartbeaticon from '../../assets/images/heartbeat-icon.png';
 import plusicon from '../../assets/images/plus-icon.png';
-import doctorteam from '../../assets/images/doctor-team.jpg';
+import doctorteam from '../../assets/images/doctor-team-small.jpg';
 
 
 import './home.scss';
