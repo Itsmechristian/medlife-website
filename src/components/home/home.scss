@@ -1,3 +1,5 @@
+//Animations
+
 @keyframes slideUp {
   from {
     transform: translateY(60px);
@@ -18,9 +20,11 @@
   }
 }
 
-.container{
-  width: 90%;
-}
+$textheadersize: 1.5rem;
+$textheadercolor: #081f3e;
+
+
+
 header{
   height: 800px;
   width: 100%;
@@ -51,7 +55,6 @@ header{
 
       h1{
         font-size: 3.5rem;
-        color: #fff;
 
         &.animate{
           animation: slideUp 1s both;
@@ -62,8 +65,8 @@ header{
         }
       }
       p{
-        font-size: 1.3rem;
         color: #fff;
+        font-size: 1.3rem;
         animation-delay: 1s !important;
         
         &.animate{
@@ -86,9 +89,9 @@ header{
           padding: 30px;
 
           h1, p, small, h2 {
+            color: #fff;
             font-weight: 400;
             font-family: 'Open Sans', sans-serif;
-            color: #fff;
           }
 
           &:nth-child(odd) {
@@ -97,8 +100,8 @@ header{
           &:nth-child(even) {
             background-color: #081f3e;
           }
+
           p{
-            font-size: 0.9rem;
             line-height: 1.5;
           }
 
@@ -148,9 +151,11 @@ header{
         }
       }
       h1{
+        color: #081f3e;
         font-size: 3rem;
       }
       h3{
+        color: #081f3e;
         font-size: 1.6rem;
       }
     }
@@ -169,7 +174,8 @@ header{
       }
       .right-side{
         h1{
-          font-size: 1.5rem;
+          color: #081f3e;
+          font-size: $textheadersize;
         }
 
         p{

@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6{
-  color: #081f3e;
+  color: #fff;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -27,15 +27,23 @@ li{
 }
 
 a{
+  color: #fff;
   font-family: sans-serif;
   text-decoration: none;
 }
 
 p{
+  color: #999;
+  font-family: sans-serif;
+}
+
+small {
+  color: #fff;
   font-family: sans-serif;
 }
 
 .container{
+  width: 90%;
   max-width: 1140px;
   margin: 0 auto;
   position: relative;

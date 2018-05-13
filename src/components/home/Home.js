@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Blog from './blog/Blog';
+import Blogs from './blog/Blogs';
 import Footer from '../footer/Footer';
 
 import doctoricon from '../../assets/images/doctor-icon.png';
@@ -16,6 +16,7 @@ import './home.scss';
 class Home extends Component {
   constructor(props) {
     super();
+
 
   }
 
@@ -138,11 +139,10 @@ class Home extends Component {
               </div>
             </div>
             <div className="section-four">
-             <Blog />
+             <Blogs />
             </div>
           </div>
           <Footer />
-          
         </div>
       </div>
     )
