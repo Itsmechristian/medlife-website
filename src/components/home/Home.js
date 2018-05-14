@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Bgpreload from '../bgpreload/Bgpreload';
+import Bgpreload from '../preload/Bgpreload';
+import Imgpreload from '../preload/Imgpreload';
+
 import Blogs from './blog/Blogs';
 import Footer from '../footer/Footer';
+import doctor from '../../assets/images/doctor.jpg';
+import doctorsmall from '../../assets/images/doctorsmall.jpg';
 
+// Section three images;
+import doctorteam from '../../assets/images/doctor-team.jpg';
+import doctorteamsmall from '../../assets/images/doctor-team-small.jpg';
+
+
+// Icons
 import doctoricon from '../../assets/images/doctor-icon.png';
 import injectionicon from '../../assets/images/injection-icon.png';
 import medkiticon from '../../assets/images/medkit-icon.png';
 import heartbeaticon from '../../assets/images/heartbeat-icon.png';
 import plusicon from '../../assets/images/plus-icon.png';
-import doctor from '../../assets/images/doctor.jpg';
-import doctorsmall from '../../assets/images/doctorsmall.jpg';
-
-import doctorteam from '../../assets/images/doctor-team-small.jpg';
-
 
 import './home.scss';
 
 class Home extends Component {
   constructor(props) {
-    super();
-
+    super(props);
 
   }
 
@@ -32,7 +36,7 @@ class Home extends Component {
             <div className="text-wrapper">
               <h1 className="animate">Medical Service that</h1>
               <h1 className="animate">You can Trust 100%</h1>
-              <p className="animate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quis</p>
+              <p className="animate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus.</p>
             </div>
           </div>
       </Bgpreload>
@@ -56,26 +60,26 @@ class Home extends Component {
                   <h1>OPENING HOURS</h1>
                   <div className="wrapper">
                     <div className="day">
-                      <h2>Monday</h2>
+                      <p>Monday</p>
                     </div>
                     <div className="time">
-                      <h2>7:00am - 12:00pm</h2>
+                      <p>7:00am - 12:00pm</p>
                     </div>
                   </div>
                   <div className="wrapper">
                     <div className="day">
-                      <h2>Tue - Thur</h2>
+                      <p>Tue - Thur</p>
                     </div>
                     <div className="time">
-                      <h2>6:00am - 12:00pm</h2>
+                      <p>6:00am - 12:00pm</p>
                     </div>
                   </div>
                   <div className="wrapper">
                     <div className="day">
-                      <h2>Friday</h2>
+                      <p>Friday</p>
                     </div>
                     <div className="time">
-                      <h2>10:00am - 12:00pm</h2>
+                      <p>10:00am - 12:00pm</p>
                     </div>
                   </div>
                   <Link to="/appointment">Request Appointment</Link>
@@ -125,7 +129,7 @@ class Home extends Component {
             </div>
             <div className="section-three">
               <div className="left-side">
-                <img src={doctorteam} alt="" />
+                <Imgpreload preloadimage={doctorteamsmall} hdimage={doctorteam} />
               </div>
               <div className="right-side">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, ipsam.</h1>
