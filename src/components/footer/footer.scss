@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Open-Sans-SemiBold';
+  src: url('../../assets/fonts/open-sans.semibold.ttf');
+}
+
 footer {
   
   height: auto;
@@ -27,6 +32,10 @@ footer {
 
   h1{
     color: #006cff;
+  }
+
+  p{
+    color: rgb(235, 235, 235);
   }
 
   .container {
@@ -69,8 +78,8 @@ footer {
               width: 30%;
   
               img{
-                height: 120px;
-                width: 120px;
+                height: 95%;
+                width: 95%;
               }
             }
             .info-wrapper{
@@ -79,9 +88,12 @@ footer {
               width: 65%;
   
               small, p{
+                font-size: 0.9rem;
                 margin: 0;
-                font-size: 18px;
-                color: #999;
+              }
+
+              p{
+                font-family: 'Open-Sans-SemiBold';
               }
             }
           }
@@ -153,7 +165,7 @@ footer {
                border: none;
               vertical-align: top;
               display: inline-block;
-               width: 30%;
+               width: 25%;
                background: #006cff;
              }
   
@@ -182,15 +194,15 @@ footer {
           vertical-align: top;
           display: inline-block;
           width: 45%;
-          margin: 15px;
+          margin: 10px;
   
           &.two{
   
             .blog{
                .image-wrapper{
                 img{
-                  height: 80px;
-                  width: 80px;
+                  height: 95%;
+                  width: 95%;
                 }
                }
             }
@@ -225,18 +237,21 @@ footer {
           flex: 1;
           width: 100%;
   
-          &.two{
-  
-            .blog{
-               .info-wrapper{
-                p, small{
-                  font-size: 1rem;
-                }
-               }
-            }
-          }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 350px){
+  .blog{
+    .image-wrapper{
+      display: block !important;
+      width: 100% !important;
+    }
+    .info-wrapper{
+      display: block !important;
+      width: 100% !important;
     }
   }
 }

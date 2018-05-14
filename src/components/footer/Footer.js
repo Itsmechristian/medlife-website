@@ -55,25 +55,25 @@ class Footer extends Component {
                       <img src={blogimage1} alt=""/>
                   </div>
                   <div className="info-wrapper">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, a?</p>
+                    <p>Ipsum lorem dolor sit amet molestias at nam.</p>
                     <small>January 27, 2017</small>
                   </div>
                 </div>
                 <div className="blog">
                   <div className="image-wrapper">
-                      <img src={blogimage1} alt=""/>
+                      <img src={blogimage2} alt=""/>
                   </div>
                   <div className="info-wrapper">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, a?</p>
+                    <p>Sed ut perspiciatis unde omnis iste.</p>
                     <small>January 27, 2017</small>
                   </div>
                 </div>
                 <div className="blog">
                   <div className="image-wrapper">
-                      <img src={blogimage1} alt=""/>
+                      <img src={blogimage3} alt=""/>
                   </div>
                   <div className="info-wrapper">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, a?</p>
+                    <p>Quis nostrum exercitationem.</p>
                     <small>January 27, 2017</small>
                   </div>
                 </div>

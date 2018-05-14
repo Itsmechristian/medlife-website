@@ -40,7 +40,7 @@ class Navbar extends Component {
     if (windowY > 90) {
       this.setState({
         navbar: {
-          height: 60,
+          height: 70,
           background: '#081f3e',
           containerPadding: '10px 0'
         }

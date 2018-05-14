@@ -1,4 +1,16 @@
+$textheadersize: 1.5rem;
+$textheadercolor: #081f3e;
+
 //Animations
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../../assets//fonts//open-sans.regular.ttf');
+}
+@font-face {
+  font-family: 'Open-Sans-Bold';
+  src: url('../../assets/fonts/open-sans.semibold.ttf');
+}
+
 
 @keyframes slideUp {
   from {
@@ -20,44 +32,28 @@
   }
 }
 
-$textheadersize: 1.5rem;
-$textheadercolor: #081f3e;
-
 
 
 .header{
   height: 800px;
   width: 100%;
   position: relative;
+  background-position: 55% 10%;
   
   .loaded{
     height: 100%;
   }
   .preload{
-
     height: 100%;
   }
-  /* &::after{
-    background-position: 55% 30%;
-    background-size: 1920px;
-    content: "";
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-image: url('../../assets/images/doctorsmall.jpg');
-  } */
+
 
   .container{
     height: 100%;
 
     .text-wrapper{
       position: relative;
-      top: 30%;
+      top: 20%;
 
       h1{
         font-size: 3.5rem;
@@ -73,6 +69,7 @@ $textheadercolor: #081f3e;
       p{
         color: #fff;
         font-size: 1.3rem;
+        font-family: 'Open-Sans';
         animation-delay: 1s !important;
         
         &.animate{
@@ -97,7 +94,6 @@ $textheadercolor: #081f3e;
           h1, p, small, h2 {
             color: #fff;
             font-weight: 400;
-            font-family: 'Open Sans', sans-serif;
           }
 
           &:nth-child(odd) {
@@ -122,15 +118,12 @@ $textheadercolor: #081f3e;
           .wrapper{
             display: flex;
             justify-content: space-between;
-          }
-
-          .wrapper{
             margin: 20px 0px;
             padding-bottom: 5px;
             border-bottom: 1px solid #fff;
             
-            h2{
-              font-size: 1rem;
+            p{
+                margin: 0;
             }
           }
 
@@ -248,6 +241,13 @@ $textheadercolor: #081f3e;
 }
 
 @media screen and (min-width: 990px) {
+  .header{
+    .container{
+      .text-wrapper{
+        top: 30%;
+      }
+    }
+  }
   .section-three{
     .left-side, .right-side{
       vertical-align: top;

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Imgpreload from '../../preload/Imgpreload.js';
+
 import { Link } from "react-router-dom";
 
 class Blog extends Component {
@@ -10,7 +12,7 @@ class Blog extends Component {
     return (
       <div className="blog">
         <div className="image-wrapper">
-          <img src={this.props.blogs.blogimage} alt="" />
+          <Imgpreload preloadimage={this.props.blogs.blogimagesmall} hdimage={this.props.blogs.blogimage} />
         </div>
         <div className="info-wrapper">
           <div
