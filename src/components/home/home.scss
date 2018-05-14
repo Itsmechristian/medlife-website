@@ -25,13 +25,19 @@ $textheadercolor: #081f3e;
 
 
 
-header{
+.header{
   height: 800px;
   width: 100%;
   position: relative;
   
+  .loaded{
+    height: 100%;
+  }
+  .preload{
 
-  &::after{
+    height: 100%;
+  }
+  /* &::after{
     background-position: 55% 30%;
     background-size: 1920px;
     content: "";
@@ -44,7 +50,7 @@ header{
     position: absolute;
     z-index: -1;
     background-image: url('../../assets/images/doctorsmall.jpg');
-  }
+  } */
 
   .container{
     height: 100%;
@@ -254,7 +260,7 @@ header{
 }
 
 @media screen and (min-width: 1200px) {
-  header{
+  .header{
     &::after{
       background-size: 100%;
     }

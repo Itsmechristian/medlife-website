@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Bgpreload from '../bgpreload/Bgpreload';
 import Blogs from './blog/Blogs';
 import Footer from '../footer/Footer';
 
@@ -8,6 +9,9 @@ import injectionicon from '../../assets/images/injection-icon.png';
 import medkiticon from '../../assets/images/medkit-icon.png';
 import heartbeaticon from '../../assets/images/heartbeat-icon.png';
 import plusicon from '../../assets/images/plus-icon.png';
+import doctor from '../../assets/images/doctor.jpg';
+import doctorsmall from '../../assets/images/doctorsmall.jpg';
+
 import doctorteam from '../../assets/images/doctor-team-small.jpg';
 
 
@@ -23,15 +27,15 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <header>
-          <div className="container">
+      <Bgpreload className="header" preloadimage={doctorsmall} hdimage={doctor}> 
+      <div className="container">
             <div className="text-wrapper">
               <h1 className="animate">Medical Service that</h1>
               <h1 className="animate">You can Trust 100%</h1>
               <p className="animate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quis</p>
             </div>
           </div>
-        </header>
+      </Bgpreload>
         <div className="body">
           <div className="container">
             <div className="section-one">
