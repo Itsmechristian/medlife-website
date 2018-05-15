@@ -5,8 +5,8 @@ import Imgpreload from '../preload/Imgpreload';
 
 import Blogs from './blog/Blogs';
 import Footer from '../footer/Footer';
-import doctor from '../../assets/images/doctor.jpg';
-import doctorsmall from '../../assets/images/doctorsmall.jpg';
+import dentistchair from '../../assets/images/dentist-chair.jpg';
+import dentistchairmin from '../../assets/images/dentist-chair-min.jpg';
 
 // Section three images;
 import doctorteam from '../../assets/images/doctor-team.jpg';
@@ -14,10 +14,12 @@ import doctorteamsmall from '../../assets/images/doctor-team-small.jpg';
 
 
 // Icons
-import doctoricon from '../../assets/images/doctor-icon.png';
-import injectionicon from '../../assets/images/injection-icon.png';
-import medkiticon from '../../assets/images/medkit-icon.png';
-import heartbeaticon from '../../assets/images/heartbeat-icon.png';
+import heartbeat from '../../assets/images/heartbeat.png';
+import ambulance from "../../assets/images/ambulance.png";
+import dna from '../../assets/images/dna.png';
+import ear from '../../assets/images/ear.png';
+import tooth from '../../assets/images/tooth.png';
+
 import plusicon from '../../assets/images/plus-icon.png';
 
 import './home.scss';
@@ -31,7 +33,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-      <Bgpreload className="header" preloadimage={doctorsmall} hdimage={doctor}> 
+      <Bgpreload className="header" preloadimage={dentistchairmin} hdimage={dentistchair}> 
       <div className="container">
             <div className="text-wrapper">
               <h1 className="animate">Medical Service that</h1>
@@ -44,12 +46,6 @@ class Home extends Component {
           <div className="container">
             <div className="section-one">
               <div className="header">
-                <section>
-                  <h1>TOP DOCTORS</h1>
-                  <small>CARE SOLUTIONS</small>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia quaerat nobis aliquam nihil distinctio necessitatibus voluptatibus</p>
-                  <Link to="/about">About</Link>
-                </section>
                 <section>
                   <h1>24 HOUR SERVICE</h1>
                   <small>SIT AMET</small>
@@ -88,7 +84,7 @@ class Home extends Component {
                   <h1>BOOKING A VISIT</h1>
                   <small>Lorem, ipsum dolor.</small>
                   <h2>(192) 523-5452</h2>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, sit</p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, sit Lorem, ipsum dolor.</p>
                   <Link to="/contact">Contact Us</Link>
                 </section>
               </div>
@@ -96,35 +92,38 @@ class Home extends Component {
             <div className="section-two">
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={doctoricon} alt="" />
+                  <img src={ambulance} alt={tooth} />
                 </div>
-                <h1>50</h1>
-                <h3>Doctors</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus</p>
+                <h3>EMERGENCY</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={heartbeaticon} alt="" />
+                  <img src={dna} alt={tooth} />
                 </div>
-                <h1>1500</h1>
-                <h3>Patients</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus</p>
+                <h3>DNA TESTING</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={medkiticon} alt="" />
+                  <img src={heartbeat} alt={tooth} />
                 </div>
-                <h1>200</h1>
-                <h3>Donations</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus</p>
+                <h3>Heart Surgery</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={injectionicon} alt="" />
+                  <img src={dna} alt={tooth} />
                 </div>
-                <h1>30</h1>
-                <h3>Specialities</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus</p>
+                <h3>EAR TREATMENT</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+              </div>
+              <div className="logos">
+                <div className="logo-wrapper">
+                  <img src={tooth} alt={tooth} />
+                </div>
+                <h3>DENTAL CARE</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
             </div>
             <div className="section-three">

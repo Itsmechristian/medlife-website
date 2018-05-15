@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './preload.scss';
-
+ 
 class Imgpreload extends Component {
   constructor(props) {
     super(props);

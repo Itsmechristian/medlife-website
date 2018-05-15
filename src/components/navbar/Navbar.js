@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { browserHistory } from 'react-router';
+import logo from '../../assets/images/logo.png';
 import './navbar.scss'
 
 class Navbar extends Component {
@@ -15,12 +16,10 @@ class Navbar extends Component {
       },
 
       // Hamburger menu css elements
-      menuHeight: '230px',
+      menuHeight: '250px',
       menu: {
         state: 'hide',
-        visibility: 'hidden',
         maxHeight: '0px',
-        opacity: 0
       }
     }
     this.navbarAnimation = this.navbarAnimation.bind(this)
@@ -60,12 +59,22 @@ class Navbar extends Component {
 
   // Hamburger menu handler
   hamburgerState() {
-    this.state.menu.state === 'hide' ? this.setState({ menu: { state: 'show', maxHeight: '230px', opacity: 1 , visibility: 'visible'} }) : this.setState({
-      menu: {
-        state: 'hide', maxHeight: '0px', opacity: 0, visibility: 'hidden'
-      }
-    })
-
+    if(this.state.menu.state === 'hide') {
+      this.setState({
+        menu: {
+          state: 'show',
+          maxHeight: '250px',
+        }
+      })
+    }
+    else{
+      this.setState({
+        menu: {
+          state: 'hide',
+          maxHeight: '0px',
+        }
+      })
+    }
   }
 
   render() {
@@ -75,11 +84,11 @@ class Navbar extends Component {
 
     return (
       <nav style={{
-           height: navbar.height, opacity: navbar.opacity, background: navbar.background 
+           height: navbar.height, opacity: navbar.opacity
            }}>
         <div className="container" style={{ padding: navbar.containerPadding }}>
           <div className="logo-wrapper">
-            <Link to="/"><h1>Med<span>life</span></h1></Link>
+            <Link to="/"><img src={logo} alt="logo"/></Link>
           </div>
           <div className="hamburger-menu" onClick={this.hamburgerState}>
             <span></span>
@@ -97,10 +106,8 @@ class Navbar extends Component {
           </div>
           <div className="menu-items"
             style={{
-              visibility: menu.visibility,
               height: this.state.menuHeight,
               maxHeight: menu.maxHeight,
-              opacity: menu.opacity
             }}>
             <ul>
               <Link to="/"><li onClick={this.hamburgerState}>Home</li></Link>
