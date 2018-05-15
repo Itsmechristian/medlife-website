@@ -113,7 +113,7 @@ class Navbar extends Component {
               <Link to="/"><li onClick={this.hamburgerState}>Home</li></Link>
               <Link to="/about"><li onClick={this.hamburgerState}>About Us</li></Link>
               <Link to="/services"><li onClick={this.hamburgerState}>Services</li></Link>
-              <Link to="/news"><li onClick={this.hamburgerState}>News</li></Link>
+              <Link to="/blogs"><li onClick={this.hamburgerState}>Blogs</li></Link>
               <Link to="/contact"><li onClick={this.hamburgerState}>Contact</li></Link>
             </ul>
           </div>
