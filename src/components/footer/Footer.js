@@ -90,7 +90,7 @@ class Footer extends Component {
             </form>
           </div>
         </div>
-        <p>Made by <a href="itsmechristian.co.uk">itsmechristian.co.uk</a></p>
+        <p>Made by <a href="https://www.itsmechristian.co.uk">itsmechristian.co.uk</a></p>
       </footer>
     );
   }

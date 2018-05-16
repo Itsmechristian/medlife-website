@@ -29,16 +29,22 @@ class Home extends Component {
     super(props);
 
   }
+  componentDidMount() {
+    let textwrapper = document.getElementById('textwrapper');
+    textwrapper.childNodes.forEach(e => {
+      e.classList.add('animate')
+    })
+  }
 
   render() {
     return (
       <div className="home">
       <Bgpreload className="header" preloadimage={dentistchairmin} hdimage={dentistchair}> 
       <div className="container">
-            <div className="text-wrapper">
-              <h1 className="animate">Medical Service that</h1>
-              <h1 className="animate">You can Trust 100%</h1>
-              <p className="animate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus.</p>
+            <div className="text-wrapper" id="textwrapper">
+              <h1>Medical Service that</h1>
+              <h1>You can Trust 100%</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus.</p>
             </div>
           </div>
       </Bgpreload>
