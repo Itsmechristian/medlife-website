@@ -1,0 +1,33 @@
+.services {
+  padding-top: 90px;
+
+  h1{
+    color: rgb(64, 77, 95);
+  }
+
+  .container {
+    .heading {
+      text-align: center;
+
+      hr {
+        max-width: 40px;
+        border-top: 2px solid #2286d1;
+      }
+
+      p {
+        margin: 0 auto;
+        max-width: 90%;
+      }
+    }
+
+    .section{
+        margin: 20px 0px;
+        
+        &.one{
+            .left-side{
+                
+            }
+        }
+    }
+  }
+}
