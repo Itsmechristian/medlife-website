@@ -2,7 +2,6 @@ import React from 'react';
 import './services.scss';
 
 // Icons 
-import ambulance from '../../assets/images/ambulance.png';
 
 const Services = () => {
     return (
