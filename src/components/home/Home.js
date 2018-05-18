@@ -98,28 +98,28 @@ class Home extends Component {
             <div className="section-two">
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={ambulance} alt={tooth} />
+                  <img src={ambulance} alt={ambulance} />
                 </div>
                 <h3>EMERGENCY</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={dna} alt={tooth} />
+                  <img src={dna} alt={dna} />
                 </div>
                 <h3>DNA TESTING</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={heartbeat} alt={tooth} />
+                  <img src={heartbeat} alt={heartbeat} />
                 </div>
                 <h3>Heart Surgery</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
               </div>
               <div className="logos">
                 <div className="logo-wrapper">
-                  <img src={dna} alt={tooth} />
+                  <img src={ear} alt={ear} />
                 </div>
                 <h3>EAR TREATMENT</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, doloribus Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
