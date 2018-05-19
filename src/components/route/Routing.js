@@ -1,37 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-  import createBrowserHistory from 'history/createBrowserHistory'
+import { Router, Route, Link, Redirect } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory'
 import Navbar from '../navbar/Navbar';
 import Home from '../home/Home';
 import About from '../about/About';
+import Services from '../services/Services';
 
-const history = createBrowserHistory()
+const history = createHistory();
 
+history.listen(() => {
+  window.scroll(0, 0)
+})
 
+const Routing = () => {
 
-class Routing extends React.Component {
-
-  componentDidMount() {
-    history.listen(() => {
-      console.log(1)
-      window.scrollTo(0, 0)
-    });
-  
-  }
-
-  render() {
     return (
-      <Router>
-        <div >
-         <Navbar />
- 
+      <Router history={history}>
+        <div>
+          <Navbar />
           <Route exact path="/" component={ Home } />
           <Route path="/about" component={ About } />
+          <Route path="/services" component={ Services } />
         </div>
       </Router>
     )
-  }
-
   };
 
 

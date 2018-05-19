@@ -5,12 +5,3 @@
 .loaded{
     backface-visibility: hidden;
 }
-
-div.preload{
-    div:nth-child(1){
-        position: fixed;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-    }
-}

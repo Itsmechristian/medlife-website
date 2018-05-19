@@ -4,7 +4,6 @@
 }
 
 footer {
-  
   height: auto;
   background: #404d5f;
 
@@ -46,9 +45,11 @@ footer {
     padding: 50px 0px;
 
     .section{
-
+      text-align: left !important;
+      
       &.one{
         .links-wrapper{
+
           margin: 20px 0px;
      
           li{
