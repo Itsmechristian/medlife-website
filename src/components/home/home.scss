@@ -50,14 +50,16 @@ $textheadercolor: #081f3e;
     }
   
   
-    .container{
-      height: 100%;
+    > .container{
+      height: 800px;
   
       .text-wrapper{
         position: relative;
         top: 30%;
-  
+
         h1{
+    transform: translateY(60px);
+          
           font-size: 3.5rem;
           color: rgb(64, 77, 95);
   
@@ -70,6 +72,7 @@ $textheadercolor: #081f3e;
           }
         }
         p{
+          opacity: 0;          
           color: rgb(64, 77, 95);
           font-size: 1.3rem;
           font-family: 'Open-Sans';
@@ -243,13 +246,7 @@ $textheadercolor: #081f3e;
 }
 
 @media screen and (min-width: 990px) {
-  .header{
-    .container{
-      .text-wrapper{
-        top: 25%;
-      }
-    }
-  }
+
   .section-three{
     .left-side, .right-side{
       vertical-align: top;
@@ -263,9 +260,7 @@ $textheadercolor: #081f3e;
 
 @media screen and (min-width: 1200px) {
   .header{
-    &::after{
       background-size: 100%;
-    }
   }
   .body{
     .container{
