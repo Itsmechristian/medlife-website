@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Bgpreload from '../preload/Bgpreload';
 import Imgpreload from '../preload/Imgpreload';
 
-import Blogs from './blog/Blogs';
+import Blogs from './homeblog/Blogs';
 import Footer from '../footer/Footer';
 import dentistchair from '../../assets/images/dentist-chair.jpg';
 import dentistchairmin from '../../assets/images/dentist-chair-min.jpg';
