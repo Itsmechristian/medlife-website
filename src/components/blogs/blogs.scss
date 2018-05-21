@@ -113,7 +113,13 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .right-side {
-    width: 88% !important;
+  .blogs {
+    .container {
+      .blog {
+        .right-side {
+          width: 88% !important;
+        }
+      }
+    }
   }
 }
