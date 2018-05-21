@@ -8,7 +8,7 @@ import blogimage1small from '../../../assets/images/blogimage1small.jpg';
 import blogprofile1 from '../../../assets/images/blogprofile1.jpg';
 
 import blogimage2 from '../../../assets/images/blogimage2.jpeg';
-import blogimage2small from '../../../assets/images/blogimage2small.jpeg';
+import blogimage2small from '../../../assets/images/blogimage2small.jpg';
 import blogprofile2 from '../../../assets/images/blogprofile2.jpg';
 
 import blogimage3 from '../../../assets/images/blogimage3.jpg';
@@ -29,7 +29,7 @@ class Blogs extends Component {
           author: 'John Doe',
           blogprofile: blogprofile1,
           blogimage: blogimage1,
-          blogimagesmall: blogimage1,
+          blogimagesmall: blogimage1small,
           datecreated: `${this.getMonth()} ${new Date().getDate() -
             2} - 10 mins ago`
         },
@@ -40,7 +40,7 @@ class Blogs extends Component {
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
           author: 'John Doe',
           blogprofile: blogprofile2,
-          blogimagesmall: blogimage2,
+          blogimagesmall: blogimage2small,
           blogimage: blogimage2,
           datecreated: `${this.getMonth()} ${new Date().getDate() -
             2} - 2 days ago`
@@ -52,7 +52,7 @@ class Blogs extends Component {
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
           author: 'John Doe',
           blogprofile: blogprofile3,
-          blogimagesmall: blogimage3,
+          blogimagesmall: blogimage3small,
           blogimage: blogimage3,
           datecreated: `${this.getMonth()} ${new Date().getDate() -
             4} - 4 days ago`
