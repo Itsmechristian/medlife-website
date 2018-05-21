@@ -1,7 +1,11 @@
-.preload{
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+.preload {
+  backdrop-filter: blur(1px) !important;
+  -webkit-backdrop-filter: blur(1px) !important;
 }
-.loaded{
-    backface-visibility: hidden;
+.loaded {
+  backface-visibility: hidden;
+}
+
+img.preload {
+  filter: blur(2px);
 }

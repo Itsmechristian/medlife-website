@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import Blog from "./Blog";
-import "./blog.scss";
+import React, { Component } from 'react';
+import Blog from './Blog';
+import './homeblog.scss';
 
 // Blogs Images
-import blogimage1 from "../../../assets/images/blogimage1.jpg";
-import blogimage1small from "../../../assets/images/blogimage1small.jpg";
-import blogprofile1 from "../../../assets/images/blogprofile1.jpg";
+import blogimage1 from '../../../assets/images/blogimage1.jpg';
+import blogimage1small from '../../../assets/images/blogimage1small.jpg';
+import blogprofile1 from '../../../assets/images/blogprofile1.jpg';
 
-import blogimage2 from "../../../assets/images/blogimage2.jpeg";
-import blogimage2small from "../../../assets/images/blogimage2small.jpeg";
-import blogprofile2 from "../../../assets/images/blogprofile2.jpg";
+import blogimage2 from '../../../assets/images/blogimage2.jpeg';
+import blogimage2small from '../../../assets/images/blogimage2small.jpeg';
+import blogprofile2 from '../../../assets/images/blogprofile2.jpg';
 
-import blogimage3 from "../../../assets/images/blogimage3.jpg";
-import blogimage3small from "../../../assets/images/blogimage3small.jpg";
-import blogprofile3 from "../../../assets/images/blogprofile3.jpg";
+import blogimage3 from '../../../assets/images/blogimage3.jpg';
+import blogimage3small from '../../../assets/images/blogimage3small.jpg';
+import blogprofile3 from '../../../assets/images/blogprofile3.jpg';
 
 class Blogs extends Component {
   constructor(props) {
@@ -23,10 +23,10 @@ class Blogs extends Component {
       blogs: [
         {
           id: 1,
-          title: "Ipsum lorem dolor sit amet molestias at nam.",
+          title: 'Ipsum lorem dolor sit amet molestias at nam.',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!",
-          author: "John Doe",
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
+          author: 'John Doe',
           blogprofile: blogprofile1,
           blogimage: blogimage1,
           blogimagesmall: blogimage1,
@@ -35,10 +35,10 @@ class Blogs extends Component {
         },
         {
           id: 2,
-          title: "Sed ut perspiciatis unde omnis iste.",
+          title: 'Sed ut perspiciatis unde omnis iste.',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!",
-          author: "John Doe",
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
+          author: 'John Doe',
           blogprofile: blogprofile2,
           blogimagesmall: blogimage2,
           blogimage: blogimage2,
@@ -47,10 +47,10 @@ class Blogs extends Component {
         },
         {
           id: 3,
-          title: "Quis nostrum exercitationem.",
+          title: 'Quis nostrum exercitationem.',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!",
-          author: "John Doe",
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
+          author: 'John Doe',
           blogprofile: blogprofile3,
           blogimagesmall: blogimage3,
           blogimage: blogimage3,
@@ -65,17 +65,17 @@ class Blogs extends Component {
 
   getMonth() {
     let month = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "November",
-      "December"
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'November',
+      'December'
     ];
 
     let numberMonth = new Date().getMonth();

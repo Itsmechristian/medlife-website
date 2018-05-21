@@ -56,7 +56,6 @@ class Navbar extends Component {
     }
   }
 
-
   // Hamburger menu handler
   hamburgerState() {
     if(this.state.menu.state === 'hide') {
@@ -100,7 +99,7 @@ class Navbar extends Component {
                 <Link to="/"><li>Home</li></Link>
                 <Link to="/about"><li>About Us</li></Link>
                 <Link to="/services"><li>Services</li></Link>
-                <Link to="/blogs"><li>Blogs</li></Link>
+                <Link to="/blogs?page=1"><li>Blogs</li></Link>
                 <Link to="/contact"><li>Contact</li></Link>
               </ul>
           </div>
