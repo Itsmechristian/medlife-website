@@ -29,8 +29,7 @@ class Routing extends React.Component {
             <Route path="/about" component={About} />
             <Route path="/services" component={Services} />
             <Route path="/blogs" render={props => <Blogs {...props} />} />
-            <Route path="/blog" render={props => <Blog {...props} />} />}
-            <Route component={Notfound} />
+            <Route path="/blog" component={Blog} />
           </Switch>
         </div>
       </Router>

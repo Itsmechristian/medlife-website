@@ -20,67 +20,14 @@ class Blogs extends Component {
     super();
 
     this.state = {
-      blogs: [
-        {
-          id: 1,
-          title: 'Ipsum lorem dolor sit amet molestias at nam.',
-          text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
-          author: 'John Doe',
-          blogprofile: blogprofile1,
-          blogimage: blogimage1,
-          blogimagesmall: blogimage1small,
-          datecreated: `${this.getMonth()} ${new Date().getDate() -
-            2} - 10 mins ago`
-        },
-        {
-          id: 2,
-          title: 'Sed ut perspiciatis unde omnis iste.',
-          text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
-          author: 'John Doe',
-          blogprofile: blogprofile2,
-          blogimagesmall: blogimage2small,
-          blogimage: blogimage2,
-          datecreated: `${this.getMonth()} ${new Date().getDate() -
-            2} - 2 days ago`
-        },
-        {
-          id: 3,
-          title: 'Quis nostrum exercitationem.',
-          text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
-          author: 'John Doe',
-          blogprofile: blogprofile3,
-          blogimagesmall: blogimage3small,
-          blogimage: blogimage3,
-          datecreated: `${this.getMonth()} ${new Date().getDate() -
-            4} - 4 days ago`
-        }
-      ]
+      blogs: []
     };
-
-    this.getMonth = this.getMonth.bind(this);
   }
 
-  getMonth() {
-    let month = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'November',
-      'December'
-    ];
-
-    let numberMonth = new Date().getMonth();
-
-    return month[numberMonth];
+  componentWillMount() {
+    fetch('http://localhost:5002/blogs')
+      .then(res => res.json())
+      .then(data => this.setState({ blogs: data.slice(0, 3) }));
   }
 
   render() {
@@ -88,7 +35,7 @@ class Blogs extends Component {
 
     if (this.state.blogs) {
       blogs = this.state.blogs.map(blog => {
-        return <Blog blogs={blog} key={blog.id} />;
+        return <Blog blog={blog} key={blog.id} />;
       });
     }
 

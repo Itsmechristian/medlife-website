@@ -9,29 +9,33 @@ class Blog extends Component {
   }
 
   render() {
+    let blog = this.props.blog;
     return (
       <div className="blog">
         <div className="image-wrapper">
-          <Imgpreload
-            preloadimage={this.props.blogs.blogimagesmall}
-            hdimage={this.props.blogs.blogimage}
-          />
+          <Imgpreload smallimage={blog.smallimage} hdimage={blog.hdimage} />
         </div>
         <div className="info-wrapper">
           <div
             className="img"
-            style={{ backgroundImage: `url(${this.props.blogs.blogprofile})` }}
+            style={{
+              backgroundImage: `url(${blog.user.profileimage})`
+            }}
           />
           <div className="wrapper">
-            <small>{this.props.blogs.author}</small>
-            <small>{this.props.blogs.datecreated}</small>
+            <small>{blog.user.name}</small>
+            <small>
+              {blog.fulldate.month} {blog.fulldate.date} {blog.fulldate.year}{' '}
+            </small>
           </div>
           <div className="text-wrapper">
-            <h1>{this.props.blogs.title}</h1>
-            <p>{this.props.blogs.text}</p>
+            <Link to={'/blog?id=' + blog.id}>
+              <h1>{blog.title}</h1>
+            </Link>
+            <p>{blog.body}</p>
             <hr />
           </div>
-          <Link to="/test">3 comments</Link>
+          <Link to={'/blog?id=' + blog.id}>3 comments</Link>
         </div>
       </div>
     );

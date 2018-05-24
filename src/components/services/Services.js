@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 import Footer from '../footer/Footer';
-import "./services.scss";
 
 // Icons
-import ambulance from "../../assets/images/ambulance.png";
-import dna from "../../assets/images/dna.png";
-import heartbeat from "../../assets/images/heartbeat.png";
-import ear from "../../assets/images/ear.png";
-import tooth from "../../assets/images/tooth.png";
+import ambulance from '../../assets/images/ambulance.png';
+import dna from '../../assets/images/dna.png';
+import heartbeat from '../../assets/images/heartbeat.png';
+import ear from '../../assets/images/ear.png';
+import tooth from '../../assets/images/tooth.png';
 
 // Doctor Images
 import doctor1 from '../../assets/images/doctor1.jpg';
@@ -82,38 +81,42 @@ const Services = () => {
         <div className="heading">
           <h1>Medlife Doctors</h1>
           <hr />
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt harum rerum saepe voluptates cumque alias nemo eveniet, repudiandae nam ullam.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
+            harum rerum saepe voluptates cumque alias nemo eveniet, repudiandae
+            nam ullam.
+          </p>
         </div>
         <div className="section two">
-            <div className="boxes">
-                <div className="box">
-                    <div className="image-wrapper">
-                        <img src={doctor1} alt={doctor1}/>
-                    </div>
-                    <div className="info-wrapper">
-                        <h3>John Doe</h3>
-                        <p>Orthondontist</p>
-                    </div>
-                </div>
-                <div className="box">
-                    <div className="image-wrapper">
-                        <img src={doctor2} alt={doctor2}/>
-                    </div>
-                    <div className="info-wrapper">
-                        <h3>Joseph Marky</h3>
-                        <p>Cardiology</p>
-                    </div>
-                </div>
-                <div className="box">
-                    <div className="image-wrapper">
-                        <img src={doctor3} alt={doctor3}/>
-                    </div>
-                    <div className="info-wrapper">
-                        <h3>Jane Ziewur</h3>
-                        <p>Cardiology</p>
-                    </div>
-                </div>
+          <div className="boxes">
+            <div className="box">
+              <div className="image-wrapper">
+                <img src={doctor1} alt={doctor1} />
+              </div>
+              <div className="info-wrapper">
+                <h3>John Doe</h3>
+                <p>Orthondontist</p>
+              </div>
             </div>
+            <div className="box">
+              <div className="image-wrapper">
+                <img src={doctor2} alt={doctor2} />
+              </div>
+              <div className="info-wrapper">
+                <h3>Joseph Marky</h3>
+                <p>Cardiology</p>
+              </div>
+            </div>
+            <div className="box">
+              <div className="image-wrapper">
+                <img src={doctor3} alt={doctor3} />
+              </div>
+              <div className="info-wrapper">
+                <h3>Jane Ziewur</h3>
+                <p>Cardiology</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

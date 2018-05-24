@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Blogwrapper from './Blogwrapper';
 import { Link } from 'react-router-dom';
-import Blog from './Blog';
-import './blogs.scss';
+import './blogs.style.scss';
 
 import blogimage1 from '../../assets/images/blogimage1.jpg';
 import blogimage1small from '../../assets/images/blogimage1small.jpg';
@@ -17,66 +17,24 @@ class Blogs extends Component {
     super(props);
 
     this.state = {
-      blogs: [
-        {
-          id: 1,
-          title: 'Ipsum lorem dolor sit amet molestias at nam.',
-          body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
-          img: [blogimage1, blogimage1small],
-          month: this.getAbbreviatedMonth(new Date().getMonth()),
-          date: new Date().getDate(),
-          year: new Date().getFullYear()
-        },
-        {
-          id: 2,
-          title: 'Sed ut perspiciatis unde omnis iste.',
-          body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
-          img: [blogimage2, blogimage2small],
-          month: this.getAbbreviatedMonth(new Date().getMonth()),
-          date: new Date().getDate() - 1,
-          year: new Date().getFullYear()
-        },
-        {
-          id: 3,
-          title: 'Quis nostrum exercitationem.',
-          body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias at nam blanditiis. Nam hic esse, repellendus harum necessitatibus corrupti!',
-          img: [blogimage3, blogimage3small],
-          month: this.getAbbreviatedMonth(new Date().getMonth()),
-          date: new Date().getDate() - 2,
-          year: new Date().getFullYear()
-        }
-      ]
+      blogs: []
     };
-
-    this.getAbbreviatedMonth = this.getAbbreviatedMonth.bind(this);
   }
 
-  getAbbreviatedMonth(m) {
-    let months = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'June',
-      'July',
-      'Aug',
-      'Sept',
-      'Oct',
-      'Nov',
-      'Dec'
-    ];
-
-    return months[m];
+  componentWillMount() {
+    fetch('http://localhost:5002/blogs')
+      .then(res => res.json())
+      .then(data => this.setState({ blogs: data }));
   }
+
   render() {
+    if (this.state.blogs.length === 0) {
+      return false;
+    }
     return (
       <div className="blogs">
         <div className="container">
-          <Blog
+          <Blogwrapper
             blogs={this.state.blogs}
             key={this.state.title}
             query={this.props.location.search}

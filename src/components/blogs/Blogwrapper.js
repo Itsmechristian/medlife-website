@@ -1,4 +1,3 @@
-import queryString from 'query-string';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Imgpreload from '../preload/Imgpreload';
@@ -9,7 +8,7 @@ import tags from '../../assets/images/tags.png';
 import comments from '../../assets/images/comments.png';
 import commentsGrey from '../../assets/images/comments-grey.png';
 
-class Blog extends Component {
+class Blogwrapper extends Component {
   constructor(props) {
     super(props);
 
@@ -73,9 +72,9 @@ class Blog extends Component {
                 </div>
                 <div className="section">
                   <p>
-                    {e.month} {e.date}
+                    {e.fulldate.month} {e.fulldate.date}
                   </p>
-                  <p>{e.year}</p>
+                  <p>{e.fulldate.year}</p>
                 </div>
                 <div className="section">
                   <img src={comments} alt={comments} />
@@ -84,11 +83,13 @@ class Blog extends Component {
               </div>
               <div className="right-side">
                 <Imgpreload
-                  hdimage={e.img[0]}
-                  preloadimage={e.img[1]}
-                  alt={e.img}
+                  hdimage={e.hdimage}
+                  smallimage={e.smallimage}
+                  alt={e.hdimage}
                 />
-                <h1>{e.title}</h1>
+                <Link to={'blog?id=' + e.id}>
+                  <h1>{e.title}</h1>
+                </Link>
                 <div className="body-wrapper">
                   <p>
                     {e.body.length > 150
@@ -98,7 +99,7 @@ class Blog extends Component {
                 </div>
                 <div className="info-wrapper">
                   <p>
-                    {e.month} {e.date} {e.year}
+                    {e.fulldate.month} {e.fulldate.date} {e.fulldate.year}
                     <img src={commentsGrey} alt={commentsGrey} /> 2 Comments
                   </p>
                 </div>
@@ -118,4 +119,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default Blogwrapper;
