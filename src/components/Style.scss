@@ -341,6 +341,71 @@ nav {
       }
       .section-four {
         height: auto;
+        .homeblogs {
+          .container {
+            .homeblog {
+              margin: 50px 0px;
+
+              .image-wrapper {
+                height: 60%;
+
+                img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              .info-wrapper {
+                margin: 15px 0px;
+
+                .img {
+                  display: inline-block;
+                  background-position: 70% 30%;
+                  background-size: 80px;
+                  border-radius: 50%;
+                  width: 50px;
+                  height: 50px;
+                }
+
+                .wrapper {
+                  vertical-align: top;
+                  display: inline-block;
+                  margin: 0px 15px;
+
+                  small {
+                    font-family: 'Open-Sans';
+                    display: block;
+                    color: #999;
+                  }
+                }
+
+                .text-wrapper {
+                  margin: 15px 0px;
+
+                  h1 {
+                    color: #404d5f;
+                    font-size: $textheadersize;
+
+                    &:hover {
+                      list-style-type: underline;
+                    }
+                  }
+
+                  p {
+                    line-height: 1.7;
+                    color: #999;
+                  }
+                }
+
+                a {
+                  color: #999;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -503,6 +568,114 @@ nav {
   }
 }
 
+.blogs {
+  padding-top: 50px;
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #404d5f;
+  }
+  .container {
+    .blogwrapper {
+      .container {
+        .blog-ctn {
+          margin: 50px 0px;
+          .left-side {
+            display: none;
+          }
+          .right-side {
+            display: block;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+            .body-wrapper {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #ededed;
+            }
+
+            .info-wrapper {
+              img {
+                padding: 0px 5px;
+                vertical-align: bottom;
+                height: 20px;
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .links {
+      margin: 0px 5px;
+      display: inline-block;
+
+      a {
+        width: auto;
+        color: #808080;
+        background: transparent;
+        padding: 5px 15px;
+        border: 1px solid #3186cd;
+        transition: background 0.5s ease;
+
+        &:hover {
+          background: #3186cd;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.blog {
+  padding-top: 100px;
+  .container {
+    .left-side {
+      .image-wrapper {
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .info-wrapper {
+        margin: 15px 0px;
+        width: 100%;
+        .date {
+          display: none;
+        }
+        .title {
+          height: auto;
+          position: relative;
+          display: block;
+          width: 100%;
+
+          h1 {
+            color: #081f3e;
+            font-size: 1.5rem;
+          }
+
+          .comment-wrapper {
+            margin: 20px 0px;
+            img {
+              height: 20px;
+              width: 20px;
+            }
+            small {
+              font-size: 1rem;
+              vertical-align: top;
+              margin: 0px 5px;
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+    .right-side {
+    }
+  }
+}
+
 @media screen and (min-width: 786px) {
   .home {
     .body {
@@ -513,9 +686,18 @@ nav {
             width: 45%;
           }
         }
-
         .section-four {
           margin: 100px 0px;
+          .homeblogs {
+            .container {
+              .homeblog {
+                margin: 15px;
+                vertical-align: top;
+                display: inline-block;
+                width: 45%;
+              }
+            }
+          }
         }
       }
     }
@@ -528,6 +710,64 @@ nav {
             display: inline-block;
             width: 45%;
             border: none;
+          }
+        }
+      }
+    }
+  }
+  .blogs {
+    padding-top: 50px;
+    .container {
+      .blogwrapper {
+        .container {
+          .blog-ctn {
+            .left-side {
+              width: 80px;
+              display: inline-block;
+              vertical-align: top;
+              border: 1px solid #ededed;
+
+              .section {
+                &:first-child {
+                  padding: 25px;
+                  border-bottom: 1px solid #ededed;
+
+                  img {
+                    height: 30px;
+                    width: 30px;
+                  }
+                }
+                &:nth-child(2) {
+                  padding: 10px;
+                  text-align: center;
+                  p {
+                    margin: 0;
+                  }
+                }
+                &:last-child {
+                  padding: 10px 20px;
+                  background: #3186cd;
+                  img {
+                    height: 20px;
+                    width: 20px;
+                  }
+
+                  small {
+                    vertical-align: top;
+                    font-size: 0.9rem;
+                    margin: 5px;
+                  }
+                }
+              }
+            }
+            .right-side {
+              margin: 0px 10px;
+              display: inline-block;
+              width: 83%;
+              .info-wrapper {
+                display: none;
+              }
+            }
           }
         }
       }
@@ -650,6 +890,28 @@ nav {
             }
             p {
               line-height: 1.7;
+            }
+          }
+        }
+        .section-four {
+          .homeblogs {
+            .container {
+              .homeblog {
+                width: 30%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .blogs {
+    .container {
+      .blogwrapper {
+        .container {
+          .blog-ctn {
+            .right-side {
+              width: 88% !important;
             }
           }
         }

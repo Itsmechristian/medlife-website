@@ -3,7 +3,7 @@ import Imgpreload from '../../preload/Imgpreload.js';
 
 import { Link } from 'react-router-dom';
 
-class Blog extends Component {
+class Homeblog extends Component {
   constructor(props) {
     super();
   }
@@ -11,7 +11,7 @@ class Blog extends Component {
   render() {
     let blog = this.props.blog;
     return (
-      <div className="blog">
+      <div className="homeblog">
         <div className="image-wrapper">
           <Imgpreload smallimage={blog.smallimage} hdimage={blog.hdimage} />
         </div>
@@ -35,11 +35,13 @@ class Blog extends Component {
             <p>{blog.body}</p>
             <hr />
           </div>
-          <Link to={'/blog?id=' + blog.id}>3 comments</Link>
+          <Link to={'/blog?id=' + blog.id}>
+            {blog.comments.length} Comments
+          </Link>
         </div>
       </div>
     );
   }
 }
 
-export default Blog;
+export default Homeblog;

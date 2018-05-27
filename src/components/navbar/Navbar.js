@@ -128,7 +128,7 @@ class Navbar extends Component {
               <Link to="/services">
                 <li onClick={this.hamburgerState}>Services</li>
               </Link>
-              <Link to="/blogs">
+              <Link to="/blogs?page=1">
                 <li onClick={this.hamburgerState}>Blogs</li>
               </Link>
               <Link to="/contact">

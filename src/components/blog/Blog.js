@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Imgpreload from '../preload/Imgpreload.js';
-
-import './blog.style.scss';
+import leftQuote from '../../assets/images/left-quote.png';
+import commentgrey from '../../assets/images/comments-grey.png';
 
 class Blog extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Blog extends Component {
       .then(res => res.json())
       .then(data => {
         if (!data.id) {
-          this.props.history.push('?id=1');
+          this.props.history.push('/404');
         } else {
           this.setState({ blog: data });
         }
@@ -34,16 +34,34 @@ class Blog extends Component {
     if (this.state.blog.length === 0) {
       return false;
     }
+    let { blog } = this.state;
     return (
       <div className="blog">
         <div className="container">
           <div className="left-side">
             <div className="image-wrapper">
               <Imgpreload
-                hdimage={this.state.blog.hdimage}
-                alt={this.state.blog.hdimage}
-                smallimage={this.state.blog.smallimage}
+                hdimage={blog.hdimage}
+                alt={blog.hdimage}
+                smallimage={blog.smallimage}
               />
+            </div>
+            <div className="info-wrapper">
+              <div className="date">
+                <img src={leftQuote} alt={leftQuote} />
+                <p>
+                  {blog.fulldate.month} {blog.fulldate.date}
+                </p>
+                <p>{blog.fulldate.year}</p>
+                <p />
+              </div>
+              <div className="title">
+                <h1>{blog.title}</h1>
+                <div className="comment-wrapper">
+                  <img src={commentgrey} alt={commentgrey} />
+                  <small>{blog.comments.length} Comments</small>
+                </div>
+              </div>
             </div>
             <div className="text-wrapper" ref="text" />
           </div>

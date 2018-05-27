@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Bgpreload from '../preload/Bgpreload';
 import Imgpreload from '../preload/Imgpreload';
 
-import Blogs from './homeblog/Blogs';
+import Homeblogs from './homeblog/Homeblogs';
 import Footer from '../footer/Footer';
 import dentistchair from '../../assets/images/dentist-chair.jpg';
 import dentistchairmin from '../../assets/images/dentist-chair-min.jpg';
@@ -20,6 +20,7 @@ import ear from '../../assets/images/ear.png';
 import tooth from '../../assets/images/tooth.png';
 
 import plusicon from '../../assets/images/plus-icon.png';
+import Homeblog from './homeblog/Homeblogs';
 
 class Home extends Component {
   constructor(props) {
@@ -192,7 +193,7 @@ class Home extends Component {
               </div>
             </div>
             <div className="section-four">
-              <Blogs />
+              <Homeblogs />
             </div>
           </div>
           <Footer />

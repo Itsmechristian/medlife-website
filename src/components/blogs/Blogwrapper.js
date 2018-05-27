@@ -26,7 +26,7 @@ class Blogwrapper extends Component {
     this.divideBlogs();
 
     if (!this.checkQuery()) {
-      this.props.push(`blogs?page=1`);
+      this.props.push(`/404`);
     } else {
       this.state.pageNumber = this.props.query.slice(
         6,
@@ -47,9 +47,8 @@ class Blogwrapper extends Component {
   }
 
   divideBlogs() {
-    let chunks = [];
-    for (let i = 0; i < this.props.blogs.length; i += 1) {
-      this.state.dividedBlogs.push(this.props.blogs.slice(i, i + 1));
+    for (let i = 0; i < this.props.blogs.length; i += 5) {
+      this.state.dividedBlogs.push(this.props.blogs.slice(i, i + 5));
     }
   }
 
@@ -62,10 +61,10 @@ class Blogwrapper extends Component {
   render() {
     let { pageNumber } = this.state;
     return (
-      <div className="blogs">
+      <div className="blogwrapper">
         <div className="container">
           {this.state.dividedBlogs[pageNumber - 1].map(e => (
-            <div className="blog" key={e.id}>
+            <div className="blog-ctn" key={e.id}>
               <div className="left-side">
                 <div className="section">
                   <img src={leftQuote} alt={leftQuote} />
@@ -82,11 +81,13 @@ class Blogwrapper extends Component {
                 </div>
               </div>
               <div className="right-side">
-                <Imgpreload
-                  hdimage={e.hdimage}
-                  smallimage={e.smallimage}
-                  alt={e.hdimage}
-                />
+                <Link to={'blog?id=' + e.id}>
+                  <Imgpreload
+                    hdimage={e.hdimage}
+                    smallimage={e.smallimage}
+                    alt={e.hdimage}
+                  />
+                </Link>
                 <Link to={'blog?id=' + e.id}>
                   <h1>{e.title}</h1>
                 </Link>
