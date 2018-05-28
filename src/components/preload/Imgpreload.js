@@ -8,7 +8,18 @@ class Imgpreload extends Component {
     let hdimage = null;
   }
 
-  componentDidMount() {
+  componentWillMount() {
+    let imageLoader = new Image();
+
+    imageLoader.src = this.props.hdimage;
+
+    imageLoader.onload = () => {
+      this.hdimage.src = this.props.hdimage;
+      this.hdimage.classList.remove('preload');
+      this.hdimage.classList.add('loaded');
+    };
+  }
+  componentDidUpdate() {
     let imageLoader = new Image();
 
     imageLoader.src = this.props.hdimage;
