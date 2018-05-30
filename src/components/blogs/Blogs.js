@@ -13,7 +13,7 @@ class Blogs extends Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:5002/blogs')
+    fetch('http://blog.medlife.tk/blogs')
       .then(res => res.json())
       .then(data => this.setState({ blogs: data }));
   }

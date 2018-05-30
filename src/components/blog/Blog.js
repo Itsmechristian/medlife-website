@@ -24,7 +24,7 @@ class Blog extends Component {
   componentWillMount() {
     this.state.id = this.props.location.search.slice(4);
 
-    fetch('http://localhost:5002/blogs')
+    fetch('http://blog.medlife.tk/blogs')
       .then(res => res.json())
       .then(data => {
         this.state.blog = data.find(e => e.id == this.state.id);
@@ -47,7 +47,7 @@ class Blog extends Component {
 
   navigateTo(e) {
     let id = e.target.getAttribute('data-id');
-    fetch('http://localhost:5002/blogs')
+    fetch('https://blog.medlife.tk/blogs')
       .then(res => res.json())
       .then(data => {
         this.setState({ blog: data.find(e => e.id == id) });
