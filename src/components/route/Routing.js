@@ -7,6 +7,7 @@ import About from '../about/About';
 import Services from '../services/Services';
 import Blogs from '../blogs/Blogs';
 import Blog from '../blog/Blog';
+import Contact from '../contact/Contact';
 import Notfound from '../notfound/Notfound';
 
 const history = createHistory();
@@ -30,6 +31,7 @@ class Routing extends React.Component {
             <Route path="/services" component={Services} />
             <Route path="/blogs" render={props => <Blogs {...props} />} />
             <Route path="/blog" component={Blog} />
+            <Route path="/contact" component={Contact} />
             <Route path="*" component={Notfound} />
           </Switch>
         </div>

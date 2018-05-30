@@ -13,7 +13,9 @@ class Homeblog extends Component {
     return (
       <div className="homeblog">
         <div className="image-wrapper">
-          <Imgpreload smallimage={blog.smallimage} hdimage={blog.hdimage} />
+          <Link to={'/blog?id=' + blog.id}>
+            <Imgpreload smallimage={blog.smallimage} hdimage={blog.hdimage} />
+          </Link>
         </div>
         <div className="info-wrapper">
           <div

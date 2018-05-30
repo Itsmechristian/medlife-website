@@ -15,8 +15,7 @@ class Blog extends Component {
     this.state = {
       id: '',
       blog: '',
-      latestblog: [],
-      photos: []
+      latestblog: []
     };
 
     this.navigateTo = this.navigateTo.bind(this);
@@ -28,14 +27,22 @@ class Blog extends Component {
     fetch('http://localhost:5002/blogs')
       .then(res => res.json())
       .then(data => {
-        this.setState({ blog: data.find(e => e.id == this.state.id) });
+        this.state.blog = data.find(e => e.id == this.state.id);
         this.setState({ latestblog: data.splice(0, 3) });
-        this.setState({ photos: data.splice(0, 6) });
       });
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    if (!nextState.blog) {
+      nextProps.history.push('/404');
+    }
+  }
   componentDidUpdate() {
-    this.refs.text.innerHTML = this.state.blog.htmlbody;
+    if (!this.state.blog) {
+      this.props.history.push('/404');
+    } else {
+      this.refs.text.innerHTML = this.state.blog.htmlbody;
+    }
   }
 
   navigateTo(e) {
@@ -50,14 +57,9 @@ class Blog extends Component {
   }
 
   render() {
-    if (
-      this.state.blog.length === 0 &&
-      this.state.latestblog.length === 0 &&
-      this.state.photos.length === 0
-    ) {
+    if (!this.state.blog) {
       return false;
     }
-
     let { blog } = this.state;
     let { latestblog } = this.state;
     let { photos } = this.state;
@@ -159,16 +161,6 @@ class Blog extends Component {
                 </div>
               </div>
             ))}
-            <h4>Photos</h4>
-            <div className="photos">
-              {photos.map(e => (
-                <Imgpreload
-                  key={e.id}
-                  hdimage={e.hdimage}
-                  smallimage={e.smallimage}
-                />
-              ))}
-            </div>
           </div>
         </div>
         <Footer />

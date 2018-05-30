@@ -20,6 +20,7 @@ class Blogwrapper extends Component {
     this.checkQuery = this.checkQuery.bind(this);
     this.divideBlogs = this.divideBlogs.bind(this);
     this.navigateTo = this.navigateTo.bind(this);
+    this.nextPage = this.nextPage.bind(this);
   }
 
   componentWillMount() {
@@ -58,6 +59,16 @@ class Blogwrapper extends Component {
     this.props.push(`blogs?page=${numberAttr}`);
   }
 
+  nextPage(e) {
+    let numberAttr = e.target.getAttribute('data-number');
+
+    if (numberAttr < this.state.dividedBlogs.length + 1) {
+      this.state.pageNumber = numberAttr;
+      this.props.push(`blogs?page=${numberAttr}`);
+    } else {
+      return false;
+    }
+  }
   render() {
     let { pageNumber } = this.state;
     return (
@@ -77,7 +88,7 @@ class Blogwrapper extends Component {
                 </div>
                 <div className="section">
                   <img src={comments} alt={comments} />
-                  <small>0</small>
+                  <small>{e.comments.length}</small>
                 </div>
               </div>
               <div className="right-side">
@@ -107,13 +118,16 @@ class Blogwrapper extends Component {
               </div>
             </div>
           ))}
-          {this.state.dividedBlogs.map((e, i) => (
-            <div className="links" key={i + 1}>
-              <a onClick={this.navigateTo} data-num={i + 1}>
+          <div className="links">
+            {this.state.dividedBlogs.map((e, i) => (
+              <a onClick={this.navigateTo} data-num={i + 1} key={i + 1}>
                 {i + 1}
               </a>
-            </div>
-          ))}
+            ))}
+            <a onClick={this.nextPage} data-number={Number(pageNumber) + 1}>
+              Next
+            </a>
+          </div>
         </div>
       </div>
     );

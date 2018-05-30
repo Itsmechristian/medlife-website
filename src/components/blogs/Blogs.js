@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from '../footer/Footer';
 import Blogwrapper from './Blogwrapper';
 import { Link } from 'react-router-dom';
 
@@ -31,6 +32,7 @@ class Blogs extends Component {
             push={this.props.history.push}
           />
         </div>
+        <Footer />
       </div>
     );
   }

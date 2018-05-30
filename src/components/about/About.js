@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../footer/Footer';
 import Imgpreload from '../preload/Imgpreload.js';
 import Bgpreload from '../preload/Bgpreload.js';
@@ -97,6 +98,20 @@ class About extends Component {
           <div className="section two">
             <div className="content">
               <img src={teamdoctor} alt={teamdoctor} />
+              <div className="text">
+                <h1>
+                  Always ensure to lay down in such a manner that tail can
+                  lightly brush human's.
+                </h1>
+                <small>Step on your keyboard </small>
+                <p>
+                  Please stop looking at your phone and pet me relentlessly
+                  pursues moth, vommit food and eat it again and eat a plant,
+                  kill a hand, and catch mouse and gave it as a present pet my
+                  belly, you know you want to; seize the hand and shred it!.{' '}
+                </p>
+                <Link to="/services">View Our Services</Link>
+              </div>
             </div>
           </div>
         </div>

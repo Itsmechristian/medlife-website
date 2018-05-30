@@ -1,6 +1,6 @@
-const path = require('path')
-    , HtmlWebpackPlugin = require('html-webpack-plugin')
-    , autoprefixer = require('autoprefixer');
+const path = require('path'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
+  autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: './src/index.js',
@@ -21,16 +21,16 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {
-            loader: require.resolve('style-loader'),
+            loader: require.resolve('style-loader')
           },
           {
             loader: require.resolve('css-loader'),
             options: {
-              importLoaders: 1,
+              importLoaders: 1
             }
           },
           {
-            loader: require.resolve('sass-loader'),
+            loader: require.resolve('sass-loader')
           },
           {
             loader: require.resolve('postcss-loader'),
@@ -43,18 +43,23 @@ module.exports = {
                     '>1%',
                     'last 4 versions',
                     'Firefox ESR',
-                    'not ie < 9',  
+                    'not ie < 9'
                   ],
-                  flexbox: 'no-2009',
-                }),
-              ],
-            },
-          }, 
+                  flexbox: 'no-2009'
+                })
+              ]
+            }
+          }
         ]
       },
       {
-        test: /\.(png|jpg|gif|jpeg)$/,
-        use: [ { loader: 'file-loader', options: { name: '[path][name]-[hash:8].[ext]'} }]
+        test: /\.(png|jpg|gif|jpeg|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: '[path][name]-[hash:8].[ext]' }
+          }
+        ]
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -67,4 +72,4 @@ module.exports = {
       template: './src/index.html'
     })
   ]
-}
+};
