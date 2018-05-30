@@ -11,7 +11,7 @@ class Homeblogs extends Component {
   }
 
   componentWillMount() {
-    fetch('http://blog.medlife.tk/blogs')
+    fetch('https://blog.medlife.tk/blogs')
       .then(res => res.json())
       .then(data => this.setState({ blogs: data.slice(0, 3) }));
   }

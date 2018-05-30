@@ -24,7 +24,7 @@ class Blog extends Component {
   componentWillMount() {
     this.state.id = this.props.location.search.slice(4);
 
-    fetch('http://blog.medlife.tk/blogs')
+    fetch('https://blog.medlife.tk/blogs')
       .then(res => res.json())
       .then(data => {
         this.state.blog = data.find(e => e.id == this.state.id);
